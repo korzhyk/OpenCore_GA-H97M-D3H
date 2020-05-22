@@ -2,6 +2,8 @@
 
 ![About this mac][100]
 
+*macOS Supported:* **10.13+**
+
 ### Hardware configuration
 
 * Intel Core i7 4770S
@@ -14,7 +16,7 @@
 
 * Working hardware
 * [BIOS][15] version `>= F7`
-* [OpenCore][1] `= 0.5.7`
+* [OpenCore][1] `= 0.5.8`
 * Populated `PlatformInfo > Generic` section in `config.plist`, can be easyly done with `GenSMBIOS` please follow [OpenCore Desktop Guide][7]. This config uses `iMac14,1` as model. `USBH97M-D3H.kext` and `PlatformInfo > Generic` section in `config.plist` are dependencies of it.
 
 ## Installation
@@ -49,7 +51,6 @@
 
 ### EFI drivers
 
-* [ApfsDriverLoader.efi][9] - Must have to run 10.13.6+
 * OpenRuntime.efi - Must have to work with native NVRAM
 * ~VirtualSMC.efi~ - only needed if you use File Vault 2 or [authrestart][6].
 
@@ -62,6 +63,11 @@
 To support this config you need replace ethernet kext `RealtekR1000SL.kext` with `AppleIntelE1000e.kext` and modify path in `config.plist`.
 
 ## Chnagelog
+###### 22/08/2020
+* Update config for OpenCore v0.5.8
+* Removed `ApfsDriverLoader.efi`, already bundled in OpenCore v0.5.8
+* Added `UEFI → APFS` section in `config.plist`
+* Config clean up
 ###### 23/04/2020
 * Initial release
 
@@ -74,7 +80,6 @@ To support this config you need replace ethernet kext `RealtekR1000SL.kext` with
 [6]: https://lifehacker.com/bypass-a-filevault-password-at-startup-by-rebooting-fro-1686770324
 [7]: https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/haswell.html#platforminfo
 [8]: https://github.com/SergeySlice/RealtekLANv3
-[9]: https://github.com/acidanthera/AppleSupportPkg
 [13]: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements
 [14]: https://github.com/acidanthera/MacInfoPkg
 [15]: https://www.gigabyte.com/Motherboard/GA-H97M-D3H-rev-10/support#support-dl-bios
