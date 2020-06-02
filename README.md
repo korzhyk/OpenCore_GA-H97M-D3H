@@ -16,7 +16,7 @@
 
 * Working hardware
 * [BIOS][15] version `>= F7`
-* [OpenCore][1] `= 0.5.8`
+* [OpenCore][1] `= 0.5.9`
 * Populated `PlatformInfo > Generic` section in `config.plist`, can be easyly done with `GenSMBIOS` please follow [OpenCore Desktop Guide][7]. This config uses `iMac14,1` as model. `USBH97M-D3H.kext` and `PlatformInfo > Generic` section in `config.plist` are dependencies of it.
 
 ## Installation
@@ -51,7 +51,6 @@
 
 ### EFI drivers
 
-* OpenRuntime.efi - Must have to work with native NVRAM
 * ~VirtualSMC.efi~ - only needed if you use File Vault 2 or [authrestart][6].
 
 ## Issues
@@ -63,7 +62,9 @@
 To support this config you need replace ethernet kext `RealtekR1000SL.kext` with `AppleIntelE1000e.kext` and modify path in `config.plist`.
 
 ## Chnagelog
-###### 22/08/2020
+###### 2/06/2020
+* Update config for OpenCore v0.5.9
+###### 22/05/2020
 * Update config for OpenCore v0.5.8
 * Removed `ApfsDriverLoader.efi`, already bundled in OpenCore v0.5.8
 * Added `UEFI → APFS` section in `config.plist`
