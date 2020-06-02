@@ -85,7 +85,7 @@ To support this config you need replace ethernet kext `RealtekR1000SL.kext` with
 [14]: https://github.com/acidanthera/MacInfoPkg
 [15]: https://www.gigabyte.com/Motherboard/GA-H97M-D3H-rev-10/support#support-dl-bios
 
-[100]: https://i.imgur.com/2JDWZlX.png "Abount this mac"
+[100]: https://i.imgur.com/QVIgmjY.png "Abount this mac"
 [101]: https://i.imgur.com/qvrlikU.png "Intel power gadget"
 [102]: https://i.imgur.com/a7BNhng.png "BIOS Features"
 [103]: https://i.imgur.com/eNrUYy8.png "BIOS Peripherals"
