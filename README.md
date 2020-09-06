@@ -62,6 +62,8 @@
 To support this config you need replace ethernet kext `RealtekR1000SL.kext` with `AppleIntelE1000e.kext` and modify path in `config.plist`.
 
 ## Chnagelog
+###### 6/09/2020
+* Update config for OpenCore v0.6.0
 ###### 2/06/2020
 * Update config for OpenCore v0.5.9
 ###### 22/05/2020
