@@ -111,7 +111,7 @@
 				<data>
 				AwAiDQ==
 				</data>
-				<key>framebuffer-fbmem	</key>
+				<key>framebuffer-fbmem</key>
 				<data>
 				AACQAA==
 				</data>
@@ -119,7 +119,7 @@
 				<data>
 				AQAAAA==
 				</data>
-				<key>framebuffer-stolenmem	</key>
+				<key>framebuffer-stolenmem</key>
 				<data>
 				AAAwAQ==
 				</data>
@@ -288,7 +288,7 @@
 			<key>AuthRestart</key>
 			<false/>
 			<key>BootProtect</key>
-			<string>Bootstrap</string>
+			<string></string>
 			<key>ExposeSensitiveData</key>
 			<integer>6</integer>
 			<key>HaltLevel</key>
@@ -404,6 +404,8 @@
 		<dict>
 			<key>EnableJumpstart</key>
 			<true/>
+			<key>GlobalConnect</key>
+			<false/>
 			<key>HideVerbose</key>
 			<true/>
 			<key>JumpstartHotPlug</key>
@@ -536,7 +538,7 @@
 			<key>ExitBootServicesDelay</key>
 			<integer>0</integer>
 			<key>IgnoreInvalidFlexRatio</key>
-			<false/>
+			<true/>
 			<key>ReleaseUsbOwnership</key>
 			<false/>
 			<key>RequestBootVarRouting</key>
