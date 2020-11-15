@@ -2,7 +2,7 @@
 
 ![About this mac][100]
 
-*macOS Supported:* **10.13+**
+*macOS Supported:* **10.14+**
 
 ### Hardware configuration
 
@@ -16,8 +16,8 @@
 
 * Working hardware
 * [BIOS][15] version `>= F7`
-* [OpenCore][1] `= 0.5.9`
-* Populated `PlatformInfo > Generic` section in `config.plist`, can be easyly done with `GenSMBIOS` please follow [OpenCore Desktop Guide][7]. This config uses `iMac14,1` as model. `USBH97M-D3H.kext` and `PlatformInfo > Generic` section in `config.plist` are dependencies of it.
+* [OpenCore][1] `= 0.6.3`
+* Populated `PlatformInfo > Generic` section in `config.plist`, can be easyly done with `GenSMBIOS` please follow [OpenCore Desktop Guide][7]. This config uses `iMac14,1` as model. `Legacy_USB3.kext` and `PlatformInfo > Generic` section in `config.plist` are dependencies of it.
 
 ## Installation
 
@@ -42,7 +42,7 @@
 
 #### Kexts
 
-* USBH97M-D3H.kext - Plist-only kext for USB port mapping
+* Legacy_USB3.kext - Plist-only kext for USB port mapping
 * [RealtekR1000SL.kext][8] - Another intel driver for Ethernet
 * [AppleALC.kext][2] - Getting audio to work as easy-peasy `layout-id = 1` defined in `SSDT-EXT.aml`
 * [Lilu.kext][3] - Dependency of `VirtualSMC.kext` and `WhateverGreen.kext`
@@ -62,6 +62,11 @@
 To support this config you need replace ethernet kext `RealtekR1000SL.kext` with `AppleIntelE1000e.kext` and modify path in `config.plist`.
 
 ## Chnagelog
+###### 15/11/2020
+* Update config for OpenCore v0.6.3
+* Rename USB mappings kext
+###### 8/09/2020
+* Update config for OpenCore v0.6.1
 ###### 6/09/2020
 * Update config for OpenCore v0.6.0
 ###### 2/06/2020
