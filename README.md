@@ -34,6 +34,7 @@
 * *Peripherals* → Intel Processor Graphics Memory Allocation [**64M**]
 * *Peripherals* → XHCI Hand-off [**Enabled**]
 * *Peripherals* → EHCI Hand-off [**Enabled**]
+* *Peripherals* → Super IO Configuration → Serial Port A [**Disabled**]
 
 ### What's behind the scenes
 
