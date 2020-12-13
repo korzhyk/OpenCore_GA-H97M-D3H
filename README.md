@@ -1,4 +1,4 @@
-# Hackintosh on Gigabyte GA-H97M-D3H (GA-H97-D3H-CF) via [OpenCore][1]
+# Hackintosh on Gigabyte GA-H97M-D3H (GA-H97-D3H-CF) via [OpenCore][OpenCore]
 
 ![About this mac][100]
 
@@ -15,9 +15,9 @@
 ### Before you start make sure you have
 
 * Working hardware
-* [BIOS][15] version `>= F7`
-* [OpenCore][1] `= 0.6.3`
-* Populated `PlatformInfo > Generic` section in `config.plist`, can be easyly done with `GenSMBIOS` please follow [OpenCore Desktop Guide][7]. This config uses `iMac14,1` as model. `Legacy_USB3.kext` and `PlatformInfo > Generic` section in `config.plist` are dependencies of it.
+* [BIOS][BIOS] version `>= F7`
+* [OpenCore][OpenCore] `= 0.6.4`
+* Populated `PlatformInfo > Generic` section in `config.plist`, can be easyly done with `GenSMBIOS` please follow [OpenCore Desktop Guide][OCDG]. This config uses `iMac14,1` as model. `Legacy_USB3.kext` and `PlatformInfo > Generic` section in `config.plist` are dependencies of it.
 
 ## Installation
 
@@ -44,15 +44,15 @@
 #### Kexts
 
 * Legacy_USB3.kext - Plist-only kext for USB port mapping
-* [RealtekR1000SL.kext][8] - Another intel driver for Ethernet
-* [AppleALC.kext][2] - Getting audio to work as easy-peasy `layout-id = 1` defined in `SSDT-EXT.aml`
-* [Lilu.kext][3] - Dependency of `VirtualSMC.kext` and `WhateverGreen.kext`
-* [VirtualSMC.kext][4] - A advanced replacement of FakeSMC, almost like native mac SMC.
-* [WhateverGreen.kext][5] - Need for iGPU support
+* [RealtekR1000SL.kext][RealtekLANv3] - Another intel driver for Ethernet
+* [AppleALC.kext][AppleALC] - Getting audio to work as easy-peasy `layout-id = 1` defined in `SSDT-EXT.aml`
+* [Lilu.kext][Lilu] - Dependency of `VirtualSMC.kext` and `WhateverGreen.kext`
+* [VirtualSMC.kext][VirtualSMC] - A advanced replacement of FakeSMC, almost like native mac SMC.
+* [WhateverGreen.kext][WhateverGreen] - Need for iGPU support
 
 ### EFI drivers
 
-* ~VirtualSMC.efi~ - only needed if you use File Vault 2 or [authrestart][6].
+* ~VirtualSMC.efi~ - only needed if you use File Vault 2 or [authrestart][FileVault].
 
 ## Issues
 
@@ -63,6 +63,8 @@
 To support this config you need replace ethernet kext `RealtekR1000SL.kext` with `AppleIntelE1000e.kext` and modify path in `config.plist`.
 
 ## Chnagelog
+###### 13/12/2020
+* Update config for OpenCore v0.6.4
 ###### 15/11/2020
 * Update config for OpenCore v0.6.3
 * Rename USB mappings kext
@@ -80,18 +82,17 @@ To support this config you need replace ethernet kext `RealtekR1000SL.kext` with
 ###### 23/04/2020
 * Initial release
 
-[1]: https://github.com/acidanthera/OpenCorePkg
-[2]: https://github.com/acidanthera/AppleALC
-[3]: https://github.com/acidanthera/Lilu
-[4]: https://github.com/acidanthera/VirtualSMC
-[5]: https://github.com/acidanthera/WhateverGreen
+[OpenCore]: https://github.com/acidanthera/OpenCorePkg
+[AppleALC]: https://github.com/acidanthera/AppleALC
+[Lilu]: https://github.com/acidanthera/Lilu
+[VirtualSMC]: https://github.com/acidanthera/VirtualSMC
+[WhateverGreen]: https://github.com/acidanthera/WhateverGreen
 
-[6]: https://lifehacker.com/bypass-a-filevault-password-at-startup-by-rebooting-fro-1686770324
-[7]: https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/haswell.html#platforminfo
-[8]: https://github.com/SergeySlice/RealtekLANv3
-[13]: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements
-[14]: https://github.com/acidanthera/MacInfoPkg
-[15]: https://www.gigabyte.com/Motherboard/GA-H97M-D3H-rev-10/support#support-dl-bios
+[FileVault]: https://lifehacker.com/bypass-a-filevault-password-at-startup-by-rebooting-fro-1686770324
+[OCDG]: https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/haswell.html#platforminfo
+[RealtekLANv3]: https://github.com/SergeySlice/RealtekLANv3
+[ISO_Codes]: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements
+[BIOS]: https://www.gigabyte.com/Motherboard/GA-H97M-D3H-rev-10/support#support-dl-bios
 
 [100]: https://i.imgur.com/QVIgmjY.png "Abount this mac"
 [101]: https://i.imgur.com/qvrlikU.png "Intel power gadget"
