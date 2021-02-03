@@ -16,7 +16,7 @@
 
 * Working hardware
 * [BIOS][BIOS] version `>= F7`
-* [OpenCore][OpenCore] `= 0.6.4`
+* [OpenCore][OpenCore] `= 0.6.6`
 * Populated `PlatformInfo > Generic` section in `config.plist`, can be easyly done with `GenSMBIOS` please follow [OpenCore Desktop Guide][OCDG]. This config uses `iMac14,1` as model. `Legacy_USB3.kext` and `PlatformInfo > Generic` section in `config.plist` are dependencies of it.
 
 ## Installation
@@ -63,6 +63,8 @@
 To support this config you need replace ethernet kext `RealtekR1000SL.kext` with `AppleIntelE1000e.kext` and modify path in `config.plist`.
 
 ## Chnagelog
+###### 3/02/2021
+* Update config for OpenCore v0.6.6
 ###### 13/12/2020
 * Update config for OpenCore v0.6.4
 ###### 15/11/2020
