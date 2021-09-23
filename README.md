@@ -2,13 +2,13 @@
 
 ![About this mac][100]
 
-*macOS Supported:* **10.14+**
+*macOS Supported:* **10.15+**
 
 ### Hardware configuration
 
 * Intel Core i7 4770S
 * Gigabyte GA-H97M-D3H (also suitable with GA-H97-D3H-CF)
-* 2×8GB Crucial Ballistix 1600MHz
+* 4×8GB Crucial Ballistix 1600MHz
 * Samsung 840 EVO 128GB (macOS)
 * Broadcom BCM4360 802.11а/b/g/n/ac Wireless Network Adapter with Bluetooth 4.0
 
@@ -16,7 +16,7 @@
 
 * Working hardware
 * [BIOS][BIOS] version `>= F7`
-* [OpenCore][OpenCore] `= 0.6.6`
+* [OpenCore][OpenCore] `= 0.7.3`
 * Populated `PlatformInfo > Generic` section in `config.plist`, can be easyly done with `GenSMBIOS` please follow [OpenCore Desktop Guide][OCDG]. This config uses `iMac14,1` as model. `Legacy_USB3.kext` and `PlatformInfo > Generic` section in `config.plist` are dependencies of it.
 
 ## Installation
@@ -43,7 +43,7 @@
 
 #### Kexts
 
-* Legacy_USB3.kext - Plist-only kext for USB port mapping
+* `USBMap.kext & USBMapLegacy.kext` - Plist-only kext for USB port mapping
 * [RealtekR1000SL.kext][RealtekLANv3] - Another intel driver for Ethernet
 * [AppleALC.kext][AppleALC] - Getting audio to work as easy-peasy `layout-id = 1` defined in `SSDT-EXT.aml`
 * [Lilu.kext][Lilu] - Dependency of `VirtualSMC.kext` and `WhateverGreen.kext`
@@ -63,6 +63,8 @@
 To support this config you need replace ethernet kext `RealtekR1000SL.kext` with `AppleIntelE1000e.kext` and modify path in `config.plist`.
 
 ## Chnagelog
+###### 23/09/2021
+* Update config for OpenCore v0.7.3
 ###### 3/02/2021
 * Update config for OpenCore v0.6.6
 ###### 13/12/2020
