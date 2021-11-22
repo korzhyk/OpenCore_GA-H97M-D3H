@@ -16,7 +16,7 @@
 
 * Working hardware
 * [BIOS][BIOS] version `>= F7`
-* [OpenCore][OpenCore] `= 0.7.3`
+* [OpenCore][OpenCore] `= 0.7.5`
 * Populated `PlatformInfo > Generic` section in `config.plist`, can be easyly done with `GenSMBIOS` please follow [OpenCore Desktop Guide][OCDG]. This config uses `iMac16,1` as model. `USBMap.kext & USBMapLegacy.kext` and `PlatformInfo > Generic` section in `config.plist` are dependencies of it.
 
 ## Installation
@@ -63,6 +63,8 @@
 To support this config you need replace ethernet kext `RealtekR1000SL.kext` with `AppleIntelE1000e.kext` and modify path in `config.plist`.
 
 ## Chnagelog
+###### 22/11/2021
+* Update config for OpenCore v0.7.5
 ###### 23/09/2021
 * Update config for OpenCore v0.7.3
 ###### 3/02/2021
